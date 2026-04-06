@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard – CivicVoice</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">CivicVoice</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="report.html">Report Issue</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Dashboard Section -->
+  <section class="dashboard-section">
+    <h2>Issue Status Overview</h2>
+    <div class="status-cards">
+      <div class="card solved">
+        <h3>Solved</h3>
+        <p id="solved-count">0</p>
+      </div>
+      <div class="card pending">
+        <h3>Pending</h3>
+        <p id="pending-count">0</p>
+      </div>
+      <div class="card failed">
+        <h3>Failed</h3>
+        <p id="failed-count">0</p>
+      </div>
+    </div>
+
+    <h2>Recent Reports</h2>
+    <div class="table-container">
+      <table class="report-table responsive-table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Location</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody id="report-list">
+          <!-- JS will populate rows -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 CivicVoice. All rights reserved.</p>
+    <p><a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+  
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

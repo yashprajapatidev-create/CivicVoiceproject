@@ -1,0 +1,246 @@
+/* Base and utility styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar - Fully Responsive */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  padding: 1rem 5%;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #003366;
+  background-color: #ffd700;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Contact Section - Enhanced Responsiveness */
+.contact-section {
+  max-width: 900px;
+  margin: 4rem auto;
+  background-color: #f4f6f9;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  flex: 1;
+}
+
+.contact-section h2 {
+  color: #003366;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin-bottom: 2.5rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+/* Grid layout for developer cards on larger screens */
+.developer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  text-align: left;
+}
+
+/* Developer cards */
+.developer-list li {
+  background: #fff;
+  padding: 1.8rem;
+  border-left: 6px solid #003366;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.developer-list li:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 51, 102, 0.25);
+}
+
+.developer-list li h3 {
+  color: #003366;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.developer-list li p {
+  margin: 0.5rem 0;
+  color: #444;
+  font-size: 1rem;
+}
+
+.developer-list li a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.developer-list li a:hover {
+  color: #e6c200;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+  .nav-links a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 4%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #003366;
+    flex-direction: column;
+    padding: 1.5rem 0;
+    gap: 0;
+    transform: translateY(-150%);
+    transition: transform 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    padding: 1rem 5%;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links a:hover {
+    background-color: #ffd700;
+    color: #003366;
+  }
+
+  .contact-section {
+    margin: 2rem 1rem;
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .developer-list li {
+    padding: 1.5rem;
+  }
+
+  .developer-list li h3 {
+    font-size: 1.3rem;
+  }
+}

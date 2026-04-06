@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – CivicVoice</title>
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">CivicVoice</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="report.html">Report Issue</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="login-section">
+    <h2>Login to Your Account</h2>
+    <form class="login-form">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+      <button type="submit" class="btn-primary glow">Login</button>
+      <p class="form-footer">
+        Don't have an account? <a href="register.html">Register here</a>
+      </p>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CivicVoice. All rights reserved.</p>
+    <p>
+      <a href="contact.html">Contact Us</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+  </footer>
+  <script src="js/login.js"></script>
+</body>
+</html>

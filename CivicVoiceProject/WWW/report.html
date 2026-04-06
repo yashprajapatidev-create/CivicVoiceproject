@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report an Issue – CivicVoice</title>
+  <link rel="stylesheet" href="css/report.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">CivicVoice</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Report Form -->
+  <section class="report-section">
+    <h2>Report a Civic Issue</h2>
+    <form id="report-form" class="report-form" onsubmit="return false;">
+      <label for="place-search">Search Place</label>
+      <input type="text" id="place-search" name="place-search" placeholder="Enter place name" required />
+
+      <div id="weather-info" style="margin-bottom: 1rem; display:none;">
+        <p><strong>Location:</strong> <span id="location-display"></span></p>
+        <p><strong>Temperature:</strong> <span id="temperature-display"></span></p>
+        <p><strong>Weather:</strong> <span id="weather-description"></span></p>
+      </div>
+
+      <label for="title">Issue Title</label>
+      <input type="text" id="title" name="title" placeholder="e.g. Broken Streetlight" required />
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="5" placeholder="Describe the issue in detail..." required></textarea>
+
+      <label for="problemType">Problem Type</label>
+      <select id="problemType" name="problemType" required>
+        <option value="">Select the problem type</option>
+        <option value="Pothole">Pothole</option>
+        <option value="Garbage Overflow">Garbage Overflow</option>
+        <option value="Broken Streetlight">Broken Streetlight</option>
+        <option value="Water Leakage">Water Leakage</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <button id="submit-button" class="btn-primary glow">Submit Issue</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 CivicVoice. All rights reserved.</p>
+    <p><a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+
+  <script src="js/report.js"></script>
+</body>
+</html>
